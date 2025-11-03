@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Captura de cuotas por persona</title>
+  <link rel="stylesheet" href="app.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Captura de cuotas por persona</h1>
+    <p class="hint">Escribe <strong>X</strong> en <em>Valor</em> para terminar la persona actual.</p>
+
+    <section class="panel">
+      <div class="row">
+        <label for="persona">Nombre de la persona</label>
+        <input type="text" id="persona" placeholder="Ej: Ana Pérez" />
+      </div>
+
+      <div class="grid">
+        <div class="col">
+          <label for="desc">Descripción</label>
+          <input type="text" id="desc" placeholder="Ej: Matrícula" />
+        </div>
+        <div class="col">
+          <label for="cuota">Número de cuota</label>
+          <input type="text" id="cuota" placeholder="Ej: 1/6, Cuota 3, Mar-2026" />
+        </div>
+        <div class="col">
+          <label for="valor">Valor</label>
+          <input type="text" id="valor" placeholder="Ej: 120000 o 'X' para terminar" />
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="btnAdd">Agregar ítem</button>
+        <button id="btnFinish">Terminar persona</button>
+        <button id="btnNew">Nueva persona</button>
+        <button id="btnResumen">Ver resumen final</button>
+      </div>
+    </section>
+
+    <section id="estadoActual" class="panel">
+      <h2 id="tituloPersonaActual">Sin persona seleccionada</h2>
+      <div id="tablaActual"></div>
+    </section>
+
+    <section id="resumenFinal" class="panel" style="display:none;">
+      <h2>Resumen final</h2>
+      <div id="resumenContenido"></div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
